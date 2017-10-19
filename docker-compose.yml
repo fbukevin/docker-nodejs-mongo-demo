@@ -8,6 +8,6 @@ app:
 db:
  build: .
  volumes:
-  - .:db
+  - .:/db
  ports:
   - '27017:27017'
