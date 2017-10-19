@@ -4,10 +4,8 @@ app:
   - .:/app
  ports:
   - '3000:3000'
+ links:
+  - db           # this tells docker-compose auto-connect to mongodb container
 
 db:
- build: .
- volumes:
-  - .:/db
- ports:
-  - '27017:27017'
+ image: mongo   # this adopts image pull from docker hub
