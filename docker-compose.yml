@@ -4,3 +4,10 @@ app:
   - .:/app
  ports:
   - '3000:3000'
+
+db:
+ build: .
+ volumes:
+  - .:db
+ ports:
+  - '27017:27017'
